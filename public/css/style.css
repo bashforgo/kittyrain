@@ -1,6 +1,5 @@
 body {
-	padding-top:70px;
-	overflow-y: scroll;
+	width: 100%;
 }
 
 @media only screen and (min-width : 768px) {
