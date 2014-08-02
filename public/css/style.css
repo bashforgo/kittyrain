@@ -1,1 +1,15 @@
-body { padding-top:30px; }
+body {
+	padding-top:70px;
+	overflow-y: scroll;
+}
+
+@media only screen and (min-width : 768px) {
+	.navbar-nav.nav-justified > li {
+	    float:none;
+	}
+
+	.navbar-collapse.collapse {
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+}
