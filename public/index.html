@@ -11,19 +11,16 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
 	<!-- JS -->
-	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
+	<script src="libs/angular/angular.js"></script>
+	<script src="libs/angular-route/angular-route.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
-	<script src="js/controllers/MainCtrl.js"></script>
-	<script src="js/controllers/NerdCtrl.js"></script>
-	<script src="js/services/NerdService.js"></script>
-	<script src="js/controllers/GeekCtrl.js"></script>
-	<script src="js/services/GeekService.js"></script>
-	<script src="js/appRoutes.js"></script>
+	<script src="js/Controllers.js"></script>
+	<script src="js/Services.js"></script>
+	<script src="js/Routes.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
+<body ng-app="hackingdom" ng-controller="MainController">
 <div class="container">
 	
 	<!-- HEADER -->
@@ -31,7 +28,7 @@
 		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-th-large"></span></button>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav nav-justified">
-				<li ng-class="{ active: isActive('home')}"><a href="/">HACKINGDOM</a></li>
+				<li><a href="/">HACKINGDOM</a></li>
 			</ul>
 		</div>
 	</nav>
