@@ -1,1 +1,1 @@
-angular.module('hackingdom', ['ngRoute', 'Routes', 'Controllers', 'Services']);
+angular.module('kitty', ['Controllers', 'Services']);

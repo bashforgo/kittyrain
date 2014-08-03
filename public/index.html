@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<base href="/">
 
-	<title>Hackingdom</title>
+	<title>Kitty Rain</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
@@ -12,34 +12,22 @@
 
 	<!-- JS -->
 	<script src="libs/angular/angular.js"></script>
-	<script src="libs/angular-route/angular-route.js"></script>
+	<script src="libs/phaser-official/build/phaser.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
 	<script src="js/Controllers.js"></script>
 	<script src="js/Services.js"></script>
 	<script src="js/Routes.js"></script>
 	<script src="js/app.js"></script>
+
 </head>
-<body ng-app="hackingdom" ng-controller="MainController">
+<body ng-app="kitty" ng-controller="MainController">
 <div class="container">
-	
-	<!-- HEADER -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-th-large"></span></button>
-		<div class="collapse navbar-collapse">
-			<a class="navbar-brand" href="/">HACKINGDOM</a>
-
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/hackathon">hackathons</a></li>
-				<li><a href="/project">projects</a></li>
-				<li><a href="/team">teams</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
-
+<div class="row">
+<h1 class="text-center">Kitty Rain</h1>
+<div class="col-md-12" id="canvas">
+</div>
+</div>
 </div>
 </body>
 </html>
