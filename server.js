@@ -12,7 +12,7 @@ var methodOverride = require('method-override');
 //var db = require('./config/db');
 
 var port = process.env.PORT || 8080; // set our port
-// mongoose.connect(process.env.MONGOHQ_URL); // connect to our mongoDB database (commented out after you enter in your own credentials)
+mongoose.connect(process.env.MONGOHQ_URL); // connect to our mongoDB database (commented out after you enter in your own credentials)
 
 app.use(express.static(__dirname + '/public')); 	// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); 					// log every request to the console

@@ -1,6 +1,8 @@
 angular.module('Controllers', []).controller('MainController', function($scope, $location) {
+	// $scope.scores = scoreS.get()
 
 	$scope.$on('$locationChangeSuccess', function($scope) {
+		// var scoreS = scoreS
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'canvas', { preload: preload, create: create, update: update });
 		var printf;
 		var kitties;
@@ -90,6 +92,7 @@ angular.module('Controllers', []).controller('MainController', function($scope, 
 
 				gameover.anchor.setTo(0.5,0.5)
 				game.input.mouse.mouseDownCallback = undefined;
+				// scoreS.save({score: frame})
 			}
 		}
 

@@ -1,11 +1,21 @@
 reqt = require('request');
+score = require('./models/score')
+
 module.exports = function(app) {
 
-	// server routes ===========================================================
 	function random (low, high) {
 	    return Math.random() * (high - low) + low;
 	}
 
+	var sendJSON = function (err, result, req, res, status) {
+		var status = status || 200;
+		if (err) {
+			res.writeHead(500);
+			res.end("DB error" + err);
+		} else {
+			res.json(status, result);
+		}
+	}
 
 	app.get('/image/:rand/rand.jpg', function(req,res){
 		reqt({
@@ -16,11 +26,18 @@ module.exports = function(app) {
 		});
 	})
 
-
-	// frontend routes =========================================================
-	// route to handle all angular requests
-	app.get('*', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
+	app.route('/score')
+		.get(function(req, res){
+			score.find().sort({score: -1}).exec(function(err, result){
+				sendJSON(err, result, req, res);
+			})
+		})
+		.put(function(req, res){
+			score.create(req.query, function(err1, result1){
+				score.find().sort({score: -1}).exec(function(err, result){
+					sendJSON(err, result, req, res);
+				})
+			})
+		})
 
 };

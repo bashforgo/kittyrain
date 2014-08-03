@@ -12,6 +12,7 @@
 
 	<!-- JS -->
 	<script src="libs/angular/angular.js"></script>
+	<script src="libs/angular-resource/angular-resource.min.js"></script>
 	<script src="libs/phaser-official/build/phaser.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
@@ -26,6 +27,9 @@
 <div class="row">
 <h1 class="text-center">Kitty Rain</h1>
 <div class="col-md-12" id="canvas">
+<table>
+	<tr ng-repeat="individual in scores">{{individual.score}}</tr>
+</table>
 </div>
 </div>
 </div>
